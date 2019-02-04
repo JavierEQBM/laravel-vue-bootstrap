@@ -1,0 +1,56 @@
+composer create-project --prefer-dist laravel/laravel blog 
+
+php artisan key:generate
+
+php artisan storage:link
+
+npm install
+
+webpack:
+npm i bootstrap-vue
+
+app.js:
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue);
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+# Ensure vue-cli is installed and up to date
+npm i -g vue-cli
+# Install dependencies
+npm i
+
+<!-- Add this to <head> -->
+<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+
+<!-- Add this after vue.js -->
+<script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
+
+1 - Instalar plugin de vue para Sublime
+	a - tools
+	b - command palette
+	c - install package control
+	d - package control: install package
+	e - vue syntax highlight
+
+2 - Instalar node y npm (se instalan juntos)
+
+3 - Actualizar dependencias de package.json con npm install
+
+4 - Dejar a la escucha las compilaciones al hacer cambios - npm run watch
+    Actualizar cambios npm run dev
+
+5 - Los componentes se almacenan en:
+	resorces -> assets -> js -> components
+    Los componentes se especifican en:
+	resorces -> assets -> js -> components -> app.js
+
+webpack.mix.js
+
+php artisan make:controller TestController --api
+npm run watch
+npm run dev
