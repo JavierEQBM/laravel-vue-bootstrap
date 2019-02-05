@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'ViewsComponentsController@home');
+Route::get('/home', 'ViewsComponentsController@home')->name('home');
 Route::get('/alerts', 'ViewsComponentsController@alerts')->name('alerts');
 
-
+Route::get('/dashboard', 'ViewsComponentsController@dashboard')->name('dashboard');
 
 Route::apiResource('throughts', 'ThroughtController');
+
+Auth::routes();

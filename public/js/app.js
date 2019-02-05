@@ -55689,7 +55689,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "b-navbar",
-    { attrs: { toggleable: "md", type: "dark", variant: "info" } },
+    { attrs: { toggleable: "md", type: "dark", variant: "info", fixed: "" } },
     [
       _c("b-navbar-toggle", { attrs: { target: "nav_collapse" } }),
       _vm._v(" "),
@@ -55746,7 +55746,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "b-navbar",
-    { attrs: { toggleable: "md", type: "dark", variant: "info" } },
+    {
+      attrs: { toggleable: "md", type: "dark", variant: "info", fixed: "top" }
+    },
     [
       _c("b-navbar-toggle", { attrs: { target: "nav_collapse" } }),
       _vm._v(" "),

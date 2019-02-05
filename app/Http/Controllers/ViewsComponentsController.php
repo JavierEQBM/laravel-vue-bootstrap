@@ -11,18 +11,23 @@ class ViewsComponentsController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        
+    public function __construct(){
+        $this->middleware('auth')->except(array(
+            'home',
+            'alerts'
+        ));
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    public function home(){
+        return view('home');
+    }
+
+    public function dashboard(){
+        return view('dashboard');
+    }
+   
     public function alerts()
     {
-        return view('alerts')->with(array('test' => 100));
+        return view('alerts');
     }
 }
